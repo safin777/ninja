@@ -10,7 +10,7 @@ ReactDOM.render(
     <React.StrictMode>
         <Nav/>
         <Basic locale="bn-BD"/>
-        <ClassCom locale="US"/>
+        <ClassCom/>
     </React.StrictMode>,
     document.getElementById("root")
 );
