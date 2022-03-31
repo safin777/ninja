@@ -32,6 +32,14 @@ export default class Form extends Component {
       })
      }
 
+     else if(e.target.type === 'checkbox'){
+      
+      this.setState({
+        checking: e.target.checked,
+      })
+     }
+
+
      else{
       console.log('Nothing is here');
      }
@@ -43,7 +51,7 @@ export default class Form extends Component {
   
 
   render() {
-    const {name,description,notes} = this.state;
+    const {name,description,notes,checking} = this.state;
     return (
       <div>
         <input type="text" value={name} onChange={this.handleTitle} placeholder='Enter your username'/>
@@ -55,7 +63,9 @@ export default class Form extends Component {
           <option value="Notes 2">Notes 2</option>
           <option value="Notes 3">Notes 3</option>
         </select>
-        
+
+        <br></br>
+        <input type="checkbox" checked={checking} onChange={this.handleTitle} /> Checkbox1
       </div>
     )
   }
