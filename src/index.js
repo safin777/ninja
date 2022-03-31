@@ -1,13 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Form from "./Components/Form";
+import Calculator from "./Components/Calculator";
 import reportWebVitals from "./reportWebVitals";
-
-
 
 ReactDOM.render(
     <React.StrictMode>
-      <Form/>
+        <Calculator/>
     </React.StrictMode>,
     document.getElementById("root")
 );
