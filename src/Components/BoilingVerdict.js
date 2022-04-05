@@ -1,25 +1,6 @@
-import React from 'react'
-
-const BoilingVerdict = ({ celsius = 0 }) => {
+export default function BoilingVerdict({ celsius = 0 }) {
   if (celsius >= 100) {
-    return (
-      <div>
-        <p>The water is boiling</p>
-      </div>
-    )
+      return <p>The water would boil.</p>;
   }
-  if (celsius < 0) {
-    return (
-      <div>
-        <p>The water is frozen</p>
-      </div>
-    )
-  } else {
-    return (
-      <div>
-        <p>The water is Normal</p>
-      </div>
-    )
-  }
+  return <p>Water would not boil.</p>;
 }
-export default BoilingVerdict
