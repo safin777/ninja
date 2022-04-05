@@ -1,22 +1,19 @@
-import React from 'react'
+import React from 'react';
 
 const scaleNames = {
-  c: 'Celsius',
-  f: 'Fahrenheit',
-}
-const TempInput = ({ scale, temperature, onTemperatureChange }) => {  //destructured the props
-    return (
-      <>
-        <fieldset>
-          <legend>Enter the {scaleNames[scale]} value here</legend>
-          <input
-            type="number"
-            value={temperature}
-            onChange={onTemperatureChange}
-          ></input>
-        </fieldset>
-      </>
-    )
-}
+    c: 'Celsius',
+    f: 'Fahrenheit',
+};
 
-export default TempInput
+export default function TemperatureInput({ temperature, scale, onTemperatureChange }) {
+    return (
+        <fieldset>
+            <legend>Enter temperature in {scaleNames[scale]}:</legend>
+            <input
+                type="text"
+                value={temperature}
+                onChange={(e) => onTemperatureChange(e, scale)}
+            />
+        </fieldset>
+    );
+}
