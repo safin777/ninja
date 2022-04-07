@@ -1,13 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Calculator from "./Components/Calculator";
-import reportWebVitals from "./reportWebVitals";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import reportWebVitals from './reportWebVitals'
+import Text from './Inheritance/Text'
+
 
 ReactDOM.render(
-    <React.StrictMode>
-        <Calculator />
-    </React.StrictMode>,
-    document.getElementById("root")
-);
+  <React.StrictMode>
+    <Text/>
+  </React.StrictMode>,
+  document.getElementById('root'),
+)
 
-reportWebVitals();
+reportWebVitals()
